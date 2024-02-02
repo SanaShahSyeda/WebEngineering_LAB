@@ -1,0 +1,98 @@
+.hover-btn {
+  border: none;
+  width: 100px;
+  height: 30px;
+  color: aliceblue;
+  border-radius: 20px;
+  background-color: rgb(92, 92, 212);
+}
+
+.hover-btn:hover {
+  cursor: pointer;
+  background-color: rgb(118, 118, 231);
+}
+
+a:focus {
+  color: blueviolet;
+}
+
+a:active {
+  color: rgb(209, 107, 124);
+}
+
+a:visited {
+  color: green;
+}
+
+a:first-child {
+  background-color: yellow;
+}
+
+/* > direct descendent  */
+
+.my_links > a:first-child {
+  color: magenta;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+}
+
+.green {
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  margin-top: -30px;
+  margin-left: -30px;
+  position: absolute;
+  background-color: green;
+}
+
+.one {
+  visibility: hidden;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.two {
+  font-family: "Sixtyfour", sans-serif;
+}
+
+.three {
+  font-family: "Cute Font", sans-serif;
+}
+
+.my_icon * {
+  width: 25px;
+  height: 25px;
+}
+
+.fixed_area {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  overflow: scroll;
+}
+
+.container {
+  gap: 10px;
+  width: 100vh;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: beige;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: brown;
+}
+
+.circle:nth-child(13) {
+  background-color: green;
+}
