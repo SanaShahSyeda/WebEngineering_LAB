@@ -1,0 +1,111 @@
+body {
+  background-color: rgb(219, 92, 92);
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+header {
+  color: white;
+  text-align: center;
+  width: 1300px;
+  height: 160px;
+  margin-top: 40px;
+  margin-left: 100px;
+}
+
+section {
+  width: 1300px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 30px;
+  background-color: rgb(244, 250, 255);
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.introduction,
+.skills,
+.contact {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.projects_body {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.intro_left {
+  margin-left: 40px;
+}
+
+.intro_right {
+  margin: 50px;
+  text-align: justify;
+  align-items: center;
+}
+
+.intro_left img {
+  width: 240px;
+  height: 200px;
+}
+
+.projects_heading,
+.skills_heading {
+  text-align: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  margin-left: 80px;
+  border-radius: 20px;
+  background-color: rgb(227, 223, 218);
+}
+
+.project img {
+  width: 200px;
+  height: 100px;
+  margin-left: 50px;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.skills_body,
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.contact {
+  color: azure;
+  background-color: black;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+a:hover {
+  color: brown;
+}
