@@ -57,7 +57,6 @@ article {
   width: 200px;
   height: 100px;
   display: flex;
-  margin-top: 150px;
   margin-left: 80px;
   align-items: center;
   justify-content: center;
@@ -78,8 +77,10 @@ article {
   height: 80px;
   padding: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 10px;
   background-color: rgb(196, 206, 206);
+}
+
+aside {
+  order: 1;
 }
