@@ -18,7 +18,7 @@ console.log(ar1.concat(ar2));
 console.log("slice(0,1) value " + ar1.slice(0, 1));
 console.log("After slice(0,1)  -->" + ar1);
 
-// array.splice(start, deleteCount, newElem1, newElem2, ..., newElemN;
+// array.splice(start, deleteCount, newElem1, newElem2, ..., newElemN);
 // newElem1 to newElemN denote the values that would be added after the start.
 // splice changes the original array by removing, replacing, or adding values and returns the affected values.
 console.log("splice(0,1) value " + ar1.splice(0, 1));
@@ -107,3 +107,82 @@ for (key in students) {
 console.log(result);
 
 // map, forEach, array.filter
+
+console.log(student1);
+// freeze makes an object completely immutable
+Object.freeze(student1);
+student1["name"] = "hello";
+console.log(student1); // no change
+
+// Object. seal allows existing properties to be modified,
+// but prevents the addition and deletion of new properties.
+Object.seal(student1);
+student1["name"] = "hello";
+console.log(student1);
+
+// Functions
+// 1: Named Functions
+/**
+ * Represents greet.
+ * @constructor
+ * @param {string} name - The Name of the user.
+ */
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Sana"));
+
+// 2: Arrow Functions
+// - shorter syntax
+// - no binding of this, and super
+// - this keyword always represents the object that defined the arrow function.
+const greeting = (name) => {
+  return "Hello, " + name + "!";
+};
+console.log(greeting("Sana"));
+
+// - arrow function with only 1 statement
+hello = () => "Hello World !!";
+console.log(hello());
+
+// 3: Anonymous Functions
+// - used as arguments to other functions or assigned to variables
+const greeting2 = function (name) {
+  return "Hello, " + name + "!";
+};
+console.log(greeting2("SANA"));
+
+// 4: Immediately Invoked Functions
+// - wrapped in parentheses to denote that it's a function expression
+// - () to invoke function
+// - used to create a new scope and avoid polluting the global namespace
+(function () {
+  console.log("I am an Immediately invoked function.");
+})();
+
+// 5: Higher Order Functions
+// - Functions that can take other functions as arguments or return functions.
+// - map, filter and reduce
+
+// 5(a): map
+// Example: Doubling each number in the array
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(function (num) {
+  return num * 2;
+});
+console.log(doubled); // Output: [ 2, 4, 6, 8, 10]
+
+// 5(b): filter
+// Example: Filtering out even numbers from the array
+numbers = [1, 2, 3, 4, 5];
+const oddNumbers = numbers.filter((num) => num % 2 !== 0);
+console.log(oddNumbers); // Output: [1, 3, 5]
+
+// 5(c): reduce
+// Example: Summing up all numbers in the array
+numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+console.log(sum); // Output: 15 (1 + 2 + 3 + 4 + 5)
