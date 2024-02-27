@@ -1,0 +1,41 @@
+#container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 80vh;
+  background-color: bisque;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#plus,
+#generate {
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 20px;
+  background-color: rgb(165, 117, 210);
+}
+
+#generate {
+  font-size: 18px;
+}
+
+.color_pallete {
+  height: 80vh;
+  width: 80vh;
+  border: 3px solid black;
+}

@@ -142,7 +142,7 @@ const greeting = (name) => {
 console.log(greeting("Sana"));
 
 // - arrow function with only 1 statement
-hello = () => "Hello World !!";
+hello = (name) => "Hello World !!";
 console.log(hello());
 
 // 3: Anonymous Functions
