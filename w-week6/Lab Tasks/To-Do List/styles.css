@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 20px;
+  /* border: 3px solid rgb(0, 0, 0); */
+}
+
+.heading_container h1 {
+  text-align: center;
+}
+
+#content_container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: bisque; */
+}
+
+#content_container input {
+  width: 270px;
+  height: 30px;
+  font-size: 15px;
+  padding-left: 10px;
+  border-radius: 20px;
+  border: 2px slid black;
+  background-color: rgb(237, 237, 237);
+}
+
+#add_button {
+  cursor: pointer;
+  width: 90px;
+  height: 34px;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 20px;
+  background-color: green;
+}
+
+.to-do {
+  width: 380px;
+  height: 60px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-label {
+  width: 890px;
+  height: 30px;
+  padding: 3px;
+  color: black;
+  padding-left: 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+.delete_button {
+  width: 260px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 20px;
+  background-color: red;
+}
