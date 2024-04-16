@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mid Exam Preparation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="title_container">
+        <h1>Mid Exam Preparation</h1>
+      </div>
+      <div id="features_container">
+        <div id="left_features_container">
+          <div id="flex_features">
+            <div>
+              <label for="flex">Flex</label>
+              <input
+                type="radio"
+                value="flex"
+                name="flexproperty"
+                id="flex"
+                onchange="handleRadioSelection('flex')"
+              />
+            </div>
+            <div>
+              <label for="flex_direction">flex_direction</label>
+              <select
+                name="flexproperty"
+                id="flex_direction"
+                disabled
+                onchange="applyFlexProperties()"
+              >
+                <option value="row">row</option>
+                <option value="column">column</option>
+                <option value="row-reverse">row_reverse</option>
+                <option value="column-reverse">column_reverse</option>
+              </select>
+            </div>
+            <div>
+              <label for="justify_content">justify_content</label>
+              <select
+                name="flexproperty"
+                id="justify_content"
+                disabled
+                onchange="applyFlexProperties()"
+              >
+                <option value="flex-start">flex_start</option>
+                <option value="flex-end">flex_end</option>
+                <option value="center">center</option>
+                <option value="space-between">space_between</option>
+                <option value="space-around">space_around</option>
+                <option value="space-evenly">space-evenly</option>
+              </select>
+            </div>
+            <div>
+              <label for="align_items">align_items</label>
+              <select
+                name="flexproperty"
+                id="align_items"
+                disabled
+                onchange="applyFlexProperties()"
+              >
+                <option value="flex-start">flex_start</option>
+                <option value="flex-end">flex_end</option>
+                <option value="center">center</option>
+              </select>
+            </div>
+            <div>
+              <label for="flex_wrap">flex_wrap</label>
+              <select
+                name="flexproperty"
+                id="flex_wrap"
+                disabled
+                onchange="applyFlexProperties()"
+              >
+                <option value="wrap">wrap</option>
+                <option value="nowrap">nowrap</option>
+                <option value="wrapreverse">wrapreverse</option>
+              </select>
+            </div>
+          </div>
+          <div id="grid_features">
+            <div>
+              <label for="Grid">Grid</label>
+              <input
+                type="radio"
+                value="grid"
+                name="gridproperty"
+                id="grid"
+                onchange="handleRadioSelection('grid')"
+              />
+            </div>
+            <div>
+              <label for="grid_rows">grid-template-rows</label>
+              <input
+                type="text"
+                name="grid_template"
+                id="grid_template_rows"
+                disabled
+                onchange="applyGridProperties()"
+              />
+            </div>
+            <div>
+              <label for="grid_columns">grid-template-columns</label>
+              <input
+                type="text"
+                name="grid_template"
+                id="grid_template_columns"
+                disabled
+                onchange="applyGridProperties()"
+              />
+            </div>
+            <div>
+              <label for="justify_items">justify_items</label>
+              <select
+                name="gridproperty"
+                id="justify_items"
+                disabled
+                onchange="applyGridProperties()"
+              >
+                <option value="start">start</option>
+                <option value="end">end</option>
+                <option value="center">center</option>
+                <option value="stretch">stretch</option>
+              </select>
+            </div>
+            <div>
+              <label for="align__items">align_items</label>
+              <select
+                name="gridproperty"
+                id="align__items"
+                disabled
+                onchange="applyGridProperties()"
+              >
+                <option value="start">start</option>
+                <option value="end">end</option>
+                <option value="center">center</option>
+                <option value="stretch">stretch</option>
+                <option value="baseline">baseline</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="right_features_container">
+          <button id="add_button">Add</button>
+          <button id="delete_button">Clear</button>
+        </div>
+      </div>
+      <div id="body_container"></div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
