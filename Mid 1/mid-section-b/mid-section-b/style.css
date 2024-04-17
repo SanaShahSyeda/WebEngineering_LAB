@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#container img {
+  width: 500px;
+  height: 500px;
+}
+
+#container button {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: rgb(181, 92, 92);
+}
+
+#thumbnails img {
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
+}
+
+#thumbnails :first-child {
+  opacity: 1;
+}
