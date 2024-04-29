@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <div id="container">
+      <button id="minus" onclick="substractCounterValue()">&minus;</button>
+      <input name="counter" id="counter" value="1" />
+      <button id="plus" onclick="addCounterValue()">&plus;</button>
+    </div>
+  </body>
+  <script>
+    let counter = document.getElementById("counter");
+    counter.value = localStorage.getItem("count");
+    function addCounterValue() {
+      counter.value = parseInt(counter.value) + 1;
+      localStorage.setItem("count", counter.value);
+    }
+    function substractCounterValue() {
+      counter.value = parseInt(counter.value) - 1;
+      localStorage.setItem("count", counter.value);
+    }
+  </script>
+</html>
