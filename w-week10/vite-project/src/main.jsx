@@ -6,5 +6,6 @@ import CustomApp from "./CustomApp.jsx";
 import { UsersWithImages } from "./Users.jsx";
 import Shapecontainer from "./Shapecontainer.jsx";
 import Chameleon from "./Chameleon.jsx";
+import Counter from "./Counter.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Shapecontainer />);
+ReactDOM.createRoot(document.getElementById("root")).render(<Chameleon />);
