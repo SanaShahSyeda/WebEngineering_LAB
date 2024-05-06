@@ -1,0 +1,15 @@
+.counter {
+  width: 400px;
+  height: 350px;
+  color: black;
+  margin-left: 550px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid rgb(15, 84, 61);
+  background-color: rgb(144, 180, 169);
+}
