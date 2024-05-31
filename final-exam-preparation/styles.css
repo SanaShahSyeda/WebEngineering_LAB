@@ -1,0 +1,26 @@
+#container > div {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  background-color: green;
+}
+
+#container > div:nth-child(odd) {
+  background-color: yellow;
+}
+
+#container > div:nth-child(even) {
+  background-color: pink;
+}
+
+#container > div:nth-child(3n + 0) {
+  background-color: yellowgreen;
+}
+
+#lists ol li {
+  list-style-type: lower-roman;
+}
+
+#container > div:not(.abc) {
+  border: 1px solid black;
+}
