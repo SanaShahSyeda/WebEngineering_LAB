@@ -1,0 +1,34 @@
+.main_div {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.product,
+.price {
+  font-size: 18px;
+  width: 200px;
+  text-align: center;
+  padding: 0.2em;
+  border-radius: 20px;
+  border: 2px solid green;
+}
+
+.add {
+  border: none;
+  width: 130px;
+  height: 35px;
+  color: white;
+  padding: 0.5em;
+  font-size: 15px;
+  background-color: green;
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgb(60, 168, 60);
+}

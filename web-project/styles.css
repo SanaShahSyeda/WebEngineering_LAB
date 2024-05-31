@@ -1,0 +1,237 @@
+:root {
+  --primary-purple: rgb(165, 122, 224);
+  --secondary-purple: rgb(178, 154, 214);
+  --tertiary-purple: rgb(142, 100, 202);
+  --quaternary-purple: rgb(127, 97, 169);
+  --quinary-purple: rgb(170, 143, 206);
+  --senary-purple: rgb(127, 85, 183);
+  --secondary-background: rgb(233, 233, 233);
+  --primary-background: rgb(255, 255, 255);
+  --primary-light: rgb(243, 236, 254);
+}
+
+body {
+  background-color: var(--primary-light);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes colors {
+  0% {
+    background-color: var(--tertiary-purple);
+  }
+  25% {
+    background-color: var(--primary-purple);
+  }
+  50% {
+    background-color: var(--quaternary-purple);
+  }
+  75% {
+    background-color: var(--quinary-purple);
+  }
+  100% {
+    background-color: var(--senary-purple);
+  }
+}
+
+#main {
+  display: flex;
+  max-width: 100%;
+  margin-top: 70px;
+  justify-content: space-evenly;
+}
+
+#main-title {
+  position: relative;
+}
+
+.top-logo-bg img,
+.bottom-logo-bg img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.top-logo-bg img {
+  margin-top: -160px;
+  margin-left: -200px;
+}
+
+.bottom-logo-bg img {
+  margin-left: 300px;
+  margin-top: -180px;
+}
+
+.grid-container {
+  display: grid;
+  margin-top: 60px;
+  gap: 0.5em 0.8em;
+  grid-template-columns: auto auto auto;
+  background-color: var(--primary-light);
+  box-shadow: 15px 10px 9px #8d8c8c;
+}
+
+.grid-item {
+  width: 110px;
+  height: 90px;
+  animation-name: colors;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  background-color: var(--secondary-purple);
+  border-top-left-radius: 20px;
+}
+
+.grid-item:nth-child(3n + 0) {
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.grid-item:nth-child(2n + 0) {
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease;
+}
+
+#user_auth {
+  width: 490px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background);
+  border-radius: 0.4em;
+}
+
+.auth_btns {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.auth_btns button {
+  width: 118px;
+  height: 45px;
+  border: none;
+  font-size: 15px;
+  border-radius: 0.4em;
+  color: var(--primary-background);
+}
+
+#user_signin {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.signin_btn,
+.signup_btn {
+  color: var(--secondary-background);
+  background-color: var(--primary-purple);
+}
+
+.signin_btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 5px 15px #888888;
+  background-color: var(--secondary-purple);
+}
+
+.icons .signup_btn {
+  color: var(--primary-purple);
+  background-color: var(--primary-background);
+}
+
+.icons i {
+  position: absolute;
+  padding-left: 0.3em;
+  margin-top: 0.8em;
+  padding-left: 0.5em;
+}
+
+.icons input {
+  width: 220px;
+  height: 40px;
+  border: none;
+  padding-left: 3em;
+  background-color: var(--secondary-background);
+  border-radius: 0.3em;
+}
+
+input:focus {
+  outline: none;
+  border: 0.1em solid var(--primary-purple);
+}
+
+#user_signin .forget_password p {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--primary-purple);
+}
+
+.forget_password p:hover,
+.dont_have_account span:hover,
+.terms_conditions span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#sign_in,
+#sign_up {
+  width: 263px;
+  height: 36px;
+  border: none;
+  font-size: 15px;
+  border-radius: 0.3em;
+}
+
+#sign_up {
+  margin-top: 30px;
+}
+
+.dont_have_account {
+  width: 263px;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  padding-top: 1em;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 0.3em;
+  background-color: var(--secondary-background);
+}
+
+.dont_have_account span,
+.terms_conditions span {
+  font-size: 13px;
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+.signup_btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 5px 15px #888888;
+  background-color: var(--secondary-background);
+}
+
+#user_signup {
+  display: none;
+}
+
+.user_signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#sign_up {
+  color: var(--primary-light);
+  background-color: var(--secondary-purple);
+}
+
+#sign_up:hover {
+  cursor: pointer;
+  box-shadow: 4px 5px 15px #888888;
+}

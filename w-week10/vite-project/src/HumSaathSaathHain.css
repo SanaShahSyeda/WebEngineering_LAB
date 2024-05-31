@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.users-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.user {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.step {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.step.active {
+  background-color: lightblue;
+}
+
+button {
+  margin-top: 10px;
+}
