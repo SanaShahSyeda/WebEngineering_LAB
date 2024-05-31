@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c3aab7d597.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="to_do.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div id="main">
+      <section id="sidebar">
+        <div id="home" onclick="displayToDoCards()">
+          <i
+            class="fa-solid fa-list-check"
+            style="color: rgb(233, 233, 233)"
+          ></i>
+          <span style="font-size: larger">Syeda's Workspace</span>
+          <i
+            onclick="toggleSidebar()"
+            id="collapse_sidebar"
+            class="fa-solid fa-arrow-left"
+            style="color: rgb(233, 233, 233)"
+          ></i>
+        </div>
+        <div>
+          <i
+            class="fa-brands fa-flipboard"
+            style="color: rgb(233, 233, 233)"
+          ></i>
+          <input name="addCard" type="text" placeholder="Add Card" autofocus />
+          <i
+            id="add_card"
+            class="fa-solid fa-plus"
+            style="color: rgb(233, 233, 233); float: right; margin-top: 5px"
+          ></i>
+        </div>
+        <div id="favourites" onclick="displayFavouriteCards()">
+          <i
+            class="fa-solid fa-heart"
+            style="color: rgb(233, 233, 233); float: left"
+          ></i>
+          <span>Favourites</span>
+        </div>
+        <div id="completed">
+          <i
+            class="fa-solid fa-check"
+            style="color: rgb(233, 233, 233); float: left"
+          ></i>
+          <span>Completed</span>
+          <i
+            id="completedCards"
+            class="fa-solid fa-angle-up"
+            style="color: rgb(233, 233, 233); float: right; margin-top: 5px"
+          ></i>
+        </div>
+        <div id="completedCardsContainer" style="display: none">
+          <!-- Completed cards will be appended here -->
+        </div>
+      </section>
+      <section id="collapsed_sidebar" style="display: none">
+        <i
+          onclick="toggleSidebar()"
+          class="fa-solid fa-arrow-right"
+          style="color: rgb(233, 233, 233)"
+        ></i>
+      </section>
+      <section id="workspace"></section>
+    </div>
+    <script src="to_do.js"></script>
+  </body>
+</html>

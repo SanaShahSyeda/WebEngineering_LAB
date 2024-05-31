@@ -1,0 +1,321 @@
+:root {
+  --primary-purple: rgb(165, 122, 224);
+  --tertiary-purple: rgb(142, 100, 202);
+  --secondary-background: rgb(233, 233, 233);
+  --primary-background: rgb(255, 255, 255);
+  --primary-light: rgb(243, 236, 254);
+  --secondary-light: rgb(255, 252, 252);
+  --secondary-purple: rgb(178, 154, 214);
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-light);
+}
+
+:hover {
+  cursor: pointer;
+}
+
+#main {
+  display: flex;
+  gap: 1em;
+  height: 100vh;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 0 0 270px;
+  height: 100%;
+  overflow-y: auto;
+  transition: width 0.3s ease-in;
+  background-color: var(--secondary-purple);
+}
+
+#sidebar:first-child {
+  padding-top: 20px;
+}
+
+.task_title_input,
+input[name="addCard"] {
+  border: none;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+input[name="addCard"] {
+  padding-left: 0.4em;
+  margin-left: 0.2em;
+  margin-top: -0.2em;
+  border-radius: 20px;
+  color: var(--primary-background);
+  background-color: var(--tertiary-purple);
+}
+
+.task_title_input {
+  padding-left: 0.5em;
+  margin-left: 0.2em;
+  margin-top: 0.4em;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+  color: var(--primary-background);
+  background-color: var(--tertiary-purple);
+}
+
+.task_title_input::placeholder,
+input[name="addCard"]::placeholder {
+  color: var(--primary-background);
+}
+
+.task_title_input:focus,
+input[name="addCard"]:focus {
+  outline: none;
+}
+
+#sidebar > div {
+  height: 30px;
+  margin-right: 3px;
+  padding: 0.7em 0.9em;
+  border-radius: 20px;
+  background-color: var(--tertiary-purple);
+}
+
+#sidebar > div:hover {
+  background-color: var(--primary-purple);
+}
+
+#sidebar span {
+  color: var(--primary-background);
+}
+
+#collapse_sidebar {
+  float: right;
+  width: 25px;
+  height: 18px;
+  margin-top: 8px;
+  padding-left: 0.4em;
+  border-radius: 25px;
+}
+
+#collapse_sidebar:hover {
+  background-color: var(--secondary-purple);
+}
+
+#collapsed_sidebar {
+  width: 20px;
+  max-height: 100%;
+  transition: width 0.2s ease-in;
+  background-color: var(--secondary-purple);
+}
+
+#collapsed_sidebar i {
+  width: 20px;
+  height: 20px;
+  padding-top: 0.2em;
+  padding-left: 0.2em;
+  border-radius: 20px;
+  margin-left: 2px;
+  margin-top: 30px;
+  color: rgb(233, 233, 233);
+}
+
+#collapsed_sidebar i:hover {
+  background-color: var(--tertiary-purple);
+}
+
+#workspace {
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  color: var(--primary-light);
+  width: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 25px;
+  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 25px;
+  border: 0.1em solid rgb(255, 255, 255);
+  position: relative;
+  background-color: var(--tertiary-purple);
+}
+
+.three_dots_title_div,
+.card_title_div {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.card_title_heading {
+  padding-left: 0.3em;
+}
+
+.delete_icon,
+.three_dots_cross,
+.card_three_dots {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.card_three_dots {
+  padding-right: 0.3em;
+  margin-top: 14px;
+}
+
+.card_three_dots i,
+.three_dots_cross i {
+  padding-top: 0.4em;
+}
+
+.card_three_dots i {
+  padding-left: 0.9em;
+}
+
+.three_dots_cross i {
+  padding-left: 0.7em;
+}
+
+.delete_icon {
+  border-radius: 25px;
+  margin-top: 6px;
+  margin-right: 2.5px;
+  background-color: var(--tertiary-purple);
+}
+
+.delete_icon i {
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  margin-right: 0.3em;
+}
+
+.card_three_dots:hover {
+  border-radius: 25px;
+  background-color: var(--secondary-purple);
+}
+
+.three_dots_menu {
+  z-index: 1;
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 13em;
+  border-radius: 10px;
+  background-color: var(--secondary-purple);
+}
+
+.menu_title_heading {
+  padding-left: 0.6em;
+  color: var(--tertiary-purple);
+}
+
+.three_dots_cross {
+  padding-right: 0.1em;
+  margin-right: 0.2em;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-color: var(--tertiary-purple);
+}
+
+.delete_icon:hover,
+.three_dots_cross:hover {
+  color: var(--primary-purple);
+  background-color: var(--secondary-background);
+}
+
+.actions {
+  color: var(--primary-light);
+  padding-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.actions > div {
+  width: 200px;
+  margin-bottom: 5px;
+  padding-left: 0.2em;
+  border-radius: 20px;
+  border: 0.1em solid var(--primary-light);
+  transition: background-color 0.2s ease;
+}
+
+.actions > div:hover {
+  background-color: var(--tertiary-purple);
+}
+
+#completed span,
+#favourites span {
+  margin-left: 10px;
+}
+
+.task {
+  background-color: var(--secondary-purple);
+}
+
+.task:hover {
+  border: 1px solid var(--primary-purple);
+}
+
+.hidden {
+  display: none;
+}
+
+.star {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  margin-top: -15px;
+  animation: shine 1s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 223, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 160px var(--primary-purple);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 223, 0, 0);
+  }
+}
+
+.card.highlight {
+  animation: highlight 1s ease-in-out;
+}
+
+#completedCardsContainer {
+  height: 100% !important;
+  max-height: max-content;
+}
+#completedCards {
+  transition: transform 0.3s ease;
+}
+
+#completedCards.fa-angle-down {
+  transform: rotate(180deg);
+}
